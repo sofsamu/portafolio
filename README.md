@@ -1,8 +1,8 @@
-*****************************************************************
+**********************************************************************************************************************************
 
 **AUN ESTA EN DESARROLLO**
 
-*****************************************************************
+**********************************************************************************************************************************
 Bienvenido a mi portafolio. Este repositorio contiene el código fuente de mi portafolio web personal, donde presento mis habilidades, experiencia y proyectos destacados.
 
 
@@ -16,7 +16,7 @@ Frontend: HTML, CSS, JavaScript
 Framework:
 Hosting: GitHub Pages
 
-
+**********************************************************************************************************************************
 Visita PONERDOMINIO para ver el portafolio en acción o navega al archivo index.html en tu navegador para verlo localmente.
 
 
@@ -24,7 +24,7 @@ Visita PONERDOMINIO para ver el portafolio en acción o navega al archivo index.
 
 Las contribuciones son bienvenidas. Si tienes ideas para mejorar el portafolio o encuentras un problema, siéntete libre de abrir un issue o enviar un pull request.
 
-
+**********************************************************************************************************************************
 **Licencia**
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
