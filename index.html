@@ -7,63 +7,202 @@
     <title>Mi portafolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function () {
+            alert('¡Atención! Esta página web aún está en construcción. :)');
+        };
+    </script>
 </head>
 
 <body>
     <header id="header">
         <nav>
-            <nav>
-                <ul>
-                    <li><a href="#about">Inicio</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li><a href="#about" class="nav-link">Inicio</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#academy" class="nav-link">Formación</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
     <main id="main">
         <section id="me">
-            <h1>Hola, soy Samuel</h1>
+            <h1>Samuel Garcia</h1>
             <p>Desarrollador Web</p>
+            <button class="button btnPrimary"><a href="https://github.com/sofsamu"><span class="btnText">GitHub</span></a></button>
+            <button class="button btnPrimary"><a href="https://www.linkedin.com/in/samuelgarciaromero/"><span class="btnText">Linkedin</span></a></button>
         </section>
-    
-        <section id="about">
-            <h2>Un poco sobre mí</h2>
-            <p>Después de trabajar en atención al cliente, ahora busco nuevos retos en tecnología, un campo que siempre me ha apasionado. Estoy emocionado por combinar mis habilidades en comunicación con mi interés en la innovación tecnológica.</p>
-        </section>
-    
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto.</p>
+        <div class="layout-box">
+            <section id="projects">
+                <h2>Proyectos</h2>
+                <div class="project-grid">
+                    <article class="project-item">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción breve del proyecto.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción breve del proyecto.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Proyecto 3</h3>
+                        <p>Descripción breve del proyecto.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Proyecto 4</h3>
+                        <p>Descripción breve del proyecto.</p>
+                    </article>
                 </div>
-                <div class="project-item">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción breve del proyecto.</p>
-                </div>
-            </div>
-        </section>
-    
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li></li>
-            </ul>
-        </section>
-    
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través de:</p>
-            <ul>
-                <li>Email: <a href="mailto:samu17gr@gmail.com">samu17gr@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/samuelgarciaromero/">Perfil de LinkedIn</a></li>
-            </ul>
-        </section>
+            </section>
+            <section id="about"> 
+                <h2>Un poco sobre mí</h2>
+                <p>Después de trabajar en atención al cliente, ahora busco nuevos retos en tecnología, un campo que
+                    siempre
+                    me ha apasionado. Estoy emocionado por combinar mis habilidades en comunicación con mi interés en la
+                    innovación tecnológica.</p>
+            </section>
+            <section id="academy">
+                <details>
+                    <summary class="accordion">
+                        <h2>Mi formación</h2> <span class="arrow">&#9660;</span>
+                    </summary>
+                    <div class="panel">
+                        <ul>
+                            <li>
+                                <h3>Curso de introducción al desarrollo web: HTML y CSS (1/2)</h3>
+                                <p>Google Actívate</p>
+                                <svg width="800px" height="800px" viewBox="0 0 20 20"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                    <title>google [#178]</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs>
+
+                                    </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7399.000000)"
+                                            fill="#EEEEEE">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path
+                                                    d="M263.821537,7247.00386 L254.211298,7247.00386 C254.211298,7248.0033 254.211298,7250.00218 254.205172,7251.00161 L259.774046,7251.00161 C259.560644,7252.00105 258.804036,7253.40026 257.734984,7254.10487 C257.733963,7254.10387 257.732942,7254.11086 257.7309,7254.10986 C256.309581,7255.04834 254.43389,7255.26122 253.041161,7254.98137 C250.85813,7254.54762 249.130492,7252.96451 248.429023,7250.95364 C248.433107,7250.95064 248.43617,7250.92266 248.439233,7250.92066 C248.000176,7249.67336 248.000176,7248.0033 248.439233,7247.00386 L248.438212,7247.00386 C249.003881,7245.1669 250.783592,7243.49084 252.969687,7243.0321 C254.727956,7242.65931 256.71188,7243.06308 258.170978,7244.42831 C258.36498,7244.23842 260.856372,7241.80579 261.043226,7241.6079 C256.0584,7237.09344 248.076756,7238.68155 245.090149,7244.51127 L245.089128,7244.51127 C245.089128,7244.51127 245.090149,7244.51127 245.084023,7244.52226 L245.084023,7244.52226 C243.606545,7247.38565 243.667809,7250.75975 245.094233,7253.48622 C245.090149,7253.48921 245.087086,7253.49121 245.084023,7253.49421 C246.376687,7256.0028 248.729215,7257.92672 251.563684,7258.6593 C254.574796,7259.44886 258.406843,7258.90916 260.973794,7256.58747 C260.974815,7256.58847 260.975836,7256.58947 260.976857,7256.59047 C263.15172,7254.63157 264.505648,7251.29445 263.821537,7247.00386"
+                                                    id="google-[#178]">
+
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <a href="https://skillshop.exceedlms.com/student/award/cDRBSRLqRrP8QRW8h2SGTrSv"
+                                    target="_blank">
+                                    <p>Credencial</p>
+                                </a>
+                            </li>
+                            <li>
+                                <h3>Curso de introducción al desarrollo web: HTML y CSS (2/2)</h3>
+                                <p>Google Actívate</p>
+                                <svg width="800px" height="800px" viewBox="0 0 20 20"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                    <title>google [#178]</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs>
+
+                                    </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7399.000000)"
+                                            fill="#EEEEEE">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path
+                                                    d="M263.821537,7247.00386 L254.211298,7247.00386 C254.211298,7248.0033 254.211298,7250.00218 254.205172,7251.00161 L259.774046,7251.00161 C259.560644,7252.00105 258.804036,7253.40026 257.734984,7254.10487 C257.733963,7254.10387 257.732942,7254.11086 257.7309,7254.10986 C256.309581,7255.04834 254.43389,7255.26122 253.041161,7254.98137 C250.85813,7254.54762 249.130492,7252.96451 248.429023,7250.95364 C248.433107,7250.95064 248.43617,7250.92266 248.439233,7250.92066 C248.000176,7249.67336 248.000176,7248.0033 248.439233,7247.00386 L248.438212,7247.00386 C249.003881,7245.1669 250.783592,7243.49084 252.969687,7243.0321 C254.727956,7242.65931 256.71188,7243.06308 258.170978,7244.42831 C258.36498,7244.23842 260.856372,7241.80579 261.043226,7241.6079 C256.0584,7237.09344 248.076756,7238.68155 245.090149,7244.51127 L245.089128,7244.51127 C245.089128,7244.51127 245.090149,7244.51127 245.084023,7244.52226 L245.084023,7244.52226 C243.606545,7247.38565 243.667809,7250.75975 245.094233,7253.48622 C245.090149,7253.48921 245.087086,7253.49121 245.084023,7253.49421 C246.376687,7256.0028 248.729215,7257.92672 251.563684,7258.6593 C254.574796,7259.44886 258.406843,7258.90916 260.973794,7256.58747 C260.974815,7256.58847 260.975836,7256.58947 260.976857,7256.59047 C263.15172,7254.63157 264.505648,7251.29445 263.821537,7247.00386"
+                                                    id="google-[#178]">
+
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <a href="https://skillshop.exceedlms.com/student/award/WVrA2iVQidGixtn9Umnp5YSk"
+                                    target="_blank">
+                                    <p>Credencial</p>
+                                </a>
+                            </li>
+                            <li>
+                                <h3>The Complete HTML5 Course: From Beginning to Expert</h3>
+                                <p>Udemy</p>
+                                <svg width="800px" height="800px" viewBox="0 0 192 192"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none">
+                                    <path
+                                        d="M33.83 46v62.997c.16 3.087 1.453 21.753 17.223 34.618A47.477 47.695 0 0 0 80 154a47.477 47.695 0 0 0 28.947-10.384c15.792-12.865 17.063-31.531 17.223-34.618V46"
+                                        class="cls-2"
+                                        style="fill:none;stroke:#EEEEEE;stroke-width:12px;stroke-linecap:round;stroke-miterlimit:10"
+                                        transform="translate(16 16)" />
+                                    <path d="M34 25 80 6l45 19"
+                                        style="fill:none;stroke:#EEEEEE;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;paint-order:stroke fill markers"
+                                        transform="translate(16 16)" />
+                                </svg>
+                                <a
+                                    href="https://www.udemy.com/certificate/UC-dec42392-af6b-411b-b344-5c5f60db8bda/"
+                                    target="_blank">
+                                    <p>Credencial</p>
+                                </a>
+                            </li>
+                            <li>
+                                <h3></h3>
+                                <p></p><a href="" target="_blank">
+                                    <p></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+            <button class="button btnPrimary"><a href="https://github.com/sofsamu"><span class="btnText">GitHub</span></a></button>
+            <button class="button btnPrimary"><a href="https://www.linkedin.com/in/samuelgarciaromero/"><span class="btnText">Linkedin</span></a></button>
+
+            <section id="skills">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li></li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contacto</h2>
+                <p>Puedes contactarme a través de:</p>
+                <ul>
+                    <li>
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z"
+                                fill="#0F0F0F" />
+                        </svg>Email: <a href="mailto:samu17gr@gmail.com">samu17gr@gmail.com</a></li>
+                    <li>
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"
+                                fill="#0F0F0F" />
+                            <path
+                                d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z"
+                                fill="#0F0F0F" />
+                            <path
+                                d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z"
+                                fill="#0F0F0F" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                                fill="#0F0F0F" />
+                        </svg>LinkedIn: <a href="https://www.linkedin.com/in/samuelgarciaromero/">Perfil de LinkedIn</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
     <footer id="footer"></footer>
 </body>
