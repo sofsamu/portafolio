@@ -184,15 +184,20 @@ nav ul li a:hover::after {
 
 #contact li {
   font-weight: bold;
-  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 #contact ul li a {
   font-weight: normal;
 }
 #contact svg {
-  height: 20px;
-  width: 20px;
-  bottom: 0;
+  height: 50px;
+  width: 50px;
+}
+
+h2 {
+  margin-bottom: 15px;
 }
 
 footer {
@@ -256,7 +261,7 @@ details[open] .arrow {
   padding: 10px;
   background-color: #222831;
   color: #eeeeee;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .panel ul li {
   margin: 50px;
@@ -268,41 +273,53 @@ details[open] .arrow {
 }
 
 .button {
-    height: 50px;
-    width: 200px;
-    position: relative;
-    background-color: transparent;
-    cursor: pointer;
-    border: 2px solid #00ADB5;
-    overflow: hidden;
-    border-radius: 30px;
-    color: #333;
-    transition: all 0.3s ease-in-out;
-    margin: 50px;
-  }
-  .btnText {
-    z-index: 1;
-    font-weight: 800;
-    letter-spacing: 4px;
-  }
-  .btnPrimary::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all 0.3s ease-in-out;
-    background-color: #333;
-    border-radius: 30px;
-    visibility: hidden;
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-  }
-  .button:hover {
-    box-shadow: 1px 1px 200px #252525;
-    color: #fff;
-  }
-  .btnPrimary:hover::after {
-    visibility: visible;
-    transform: scale(100) translateX(2px);
-  }
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #00adb5;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  margin: 50px;
+}
+.btnText {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+.btnPrimary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+}
+.btnPrimary:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+/* Estilos para el boton de scroll arriba */
+
+.top-button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: sticky;
+  bottom: 3%;
+  left: 95%;
+  border: solid 1px #ff0000;
+}
