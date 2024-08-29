@@ -13,11 +13,10 @@ Este portafolio está diseñado para mostrar mis proyectos y proporcionar inform
 **Tecnologías Utilizadas**
 
 Frontend: HTML, CSS, JavaScript
-Framework:
 Hosting: GitHub Pages
 
 **********************************************************************************************************************************
-Visita PONERDOMINIO para ver el portafolio en acción o navega al archivo index.html en tu navegador para verlo localmente.
+Visita [PONERDOMINIO](https://sofsamu.github.io/portafolio/) para ver el portafolio en acción o navega al archivo index.html en tu navegador para verlo localmente.
 
 
 **Contribuciones**
