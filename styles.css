@@ -114,7 +114,9 @@ nav ul li a:hover {
 }
 
 #me .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center; 
   background-color: #00adb5;
   color: #ffffff;
   padding: 15px 40px;
@@ -126,11 +128,22 @@ nav ul li a:hover {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+#me svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  fill: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
 #me .button:hover {
   background-color: #ffffff;
   color: #00adb5;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
+}
+#me .button:hover svg{
+  fill: #00adb5;
 }
 
 /* Secciones generales */
@@ -246,7 +259,7 @@ footer {
   color: #222831;
   border-radius: 15px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 25px;
   width: 80%;
   max-width: 700px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -264,14 +277,16 @@ footer {
 
 #toggle {
   background-color: #00adb5;
+  font-size: 18px;
   font-weight: bold;
   color: #eeeeee;
-  padding: 10px 20px;
+  padding: 15px 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: 0.3s ease;
-  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 #toggle:hover {
