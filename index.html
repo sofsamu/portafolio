@@ -16,13 +16,35 @@
 </head>
 
 <body id="body">
+    <div id="construction-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Sitio en Construcción</h2><svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 492.804 492.804" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M482.592,381.614L288.863,69.966c-11.22-18.044-26.348-27.96-42.656-27.96c-16.32,0-31.456,9.924-42.672,27.976
+                 L10.267,381.142c-11.216,18.04-13.316,35.268-5.94,48.564c7.432,13.38,23.36,20.728,44.864,20.752l394.608,0.3h-0.336v0.04
+                 c19.272,0,37.56-7.316,44.984-20.652C495.824,416.89,493.808,399.666,482.592,381.614z M256.96,388.59
+                 c-2.868,2.86-6.736,4.484-10.792,4.484c-4.048,0-7.988-1.64-10.868-4.5c-2.856-2.86-4.476-6.852-4.472-10.932
+                 c0.008-4.056,0.956-8.024,3.82-10.86c2.924-2.888,5.404-4.54,9.26-4.54l0.72-0.008c4.04,0,8.84,1.66,11.744,4.564
+                 c2.872,2.856,4.932,6.812,4.924,10.876C261.292,381.762,259.852,385.742,256.96,388.59z M246.216,331.398
+                 c-4.12,0-7.94-1.6-10.852-4.512c-2.912-2.916-4.488-6.792-4.484-10.92l-1.616-139.068c0.016-8.512,5.972-15.416,13.684-15.416
+                 h1.772c4.124,0,8.88,1.604,11.788,4.52c2.916,2.92,4.932,6.788,4.928,10.916l0.1,139.068
+                 C261.528,324.482,254.724,331.398,246.216,331.398z" />
+                    </g>
+                </g>
+            </svg>
+            <p>Este sitio web aún está en desarrollo. Por favor, ten en cuenta que pueden haber fallos y errores.</p>
+        </div>
+    </div>
     <header id="header">
         <nav>
             <ul>
-                <li><a href="#about" class="nav-link">Inicio</a></li>
                 <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
                 <li><a href="#skills" class="nav-link">Habilidades</a></li>
-                <li><a href="#academy" class="nav-link">Formación</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
@@ -32,10 +54,9 @@
         <section id="me">
             <h1>Samuel Garcia</h1>
             <p>Desarrollador Web</p>
-            <a href="https://github.com/sofsamu" class="button">GitHub</a>
-            <a href="https://www.linkedin.com/in/samuelgarciaromero/" class="button">Linkedin</a>
+            <a href="https://github.com/sofsamu" class="button" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/samuelgarciaromero/" class="button" target="_blank">Linkedin</a>
         </section>
-
         <div class="layout-box">
             <section id="projects">
                 <h2>Proyectos</h2>
@@ -59,26 +80,54 @@
                 </div>
             </section>
 
-            <section id="about">
-                <h2>Un poco sobre mí</h2>
-                <p>Después de trabajar en atención al cliente, ahora busco nuevos retos en tecnología, un campo que
-                    siempre me ha apasionado.</p>
-            </section>
-
-            <section id="academy">
-                <h2>Mi formación</h2>
-                <p>Descripción de mi formación académica y cursos realizados.</p>
-            </section>
-
             <section id="skills">
                 <h2>Habilidades</h2>
                 <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
+                    <li><svg width="800px" height="800px" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26" />
+                            <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529" />
+                            <path
+                                d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
+                                fill="white" />
+                        </svg></li>
+                    <li><svg width="800px" height="800px" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8" />
+                            <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD" />
+                            <path
+                                d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z"
+                                fill="white" />
+                        </svg></li>
+                    <li><svg width="800px" height="800px" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="28" height="28" fill="#FFCA28" />
+                            <path
+                                d="M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z"
+                                fill="#3E3E3E" />
+                            <path
+                                d="M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z"
+                                fill="#3E3E3E" />
+                        </svg></li>
                 </ul>
             </section>
-
+            <section id="about">
+                <h2>Un poco sobre mí</h2><button id="toggle"></button>
+                <div id="about-content">
+                    <p>Tras una sólida experiencia en hostelería y como dependiente de comercio, estoy en busca de
+                        nuevos retos en el ámbito tecnológico, un campo que siempre me ha apasionado y en el que he
+                        invertido mucho tiempo como hobby. <br>
+                        <br>Ahora, estoy decidido a convertir esa pasión en una carrera
+                        profesional, aplicando las habilidades interpersonales y de resolución de problemas adquiridas
+                        en mis anteriores roles, junto con mi entusiasmo por la tecnología, para seguir aprendiendo y
+                        contribuir al éxito de proyectos innovadores.
+                    </p>
+                    <section id="academy">
+                        <h3>Mi formación</h3>
+                        <p>Descripción de mi formación académica y cursos realizados.</p>
+                    </section>
+                </div>
+            </section>
             <section id="contact">
                 <h2>Contacto</h2>
                 <p>Puedes contactarme a través de:</p>
@@ -112,7 +161,6 @@
             </section>
         </div>
     </main>
-
     <a href="#body" class="top-button"><svg fill="white" height="800px" width="800px" version="1.1" id="Icons"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
             xml:space="preserve">
@@ -126,6 +174,7 @@
     <footer id="footer">
         <p>&copy; 2024 No hay derechos reservados jajaja todo de licencia libre.</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
