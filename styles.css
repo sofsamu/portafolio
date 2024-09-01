@@ -39,39 +39,44 @@ img {
 
 /* Encabezado y Navegación */
 header {
-  background: url("images/remy-penet-fw8Fj0SBeVs-unsplash.jpg") no-repeat
-    center center/cover;
   text-align: center;
 }
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+}
+
 nav {
+  position: sticky;
+  top: 0;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #2228312a;
+  background-color: rgba(34, 40, 49, 0.16);
   backdrop-filter: blur(10px);
-  position: sticky;
   top: 0;
   z-index: 3;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
-}
-header nav ul {
-  list-style: none;
-  align-self: center;
-}
-nav svg {
-  width: 75px;
-  height: 75px;
-  vertical-align: middle;
+  font-size: 15px;
 }
 nav ul li {
   display: inline-block;
   margin: 0 15px;
 }
 
-nav ul li:not(:first-child) a {
-  font-size: 18px;
+nav ul li a {
   font-weight: 600;
   color: #eeeeee;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -83,26 +88,10 @@ nav ul li a {
   padding-bottom: 5px;
   display: inline-block;
 }
-/* nav ul li:not(:first-child) a:hover {
-  color: #de3d3d;
-  border-bottom: 3px solid #de3d3d;
-} */
-@keyframes rotate-left-right {
-  0% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(-10deg);
-  }
-}
-nav ul li:first-child:hover {
-  animation: rotate-left-right 0.6s ease-in-out infinite;
-}
 
 /* Sección principal con Imagen de Fondo */
+
+
 #me {
   color: #ffffff;
   padding: 120px 20px;
@@ -117,7 +106,7 @@ nav ul li:first-child:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+
   z-index: 1;
 }
 
@@ -271,6 +260,7 @@ footer {
   transform: scale(0.95);
   transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out,
     transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+  overflow-y: scroll;
 }
 #about-content.show {
   max-height: 1000px;
@@ -436,63 +426,83 @@ footer {
 .line-link {
   position: relative;
   display: inline-block;
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   color: #fff;
   font-weight: lighter;
   z-index: 1;
   border-bottom: 1px solid fade(#fff, 75%);
-  padding-bottom: 10px;
-  
+  padding-bottom: 5px;
+
   &:before,
   &:after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      height: 1px;
-      visibility: hidden;
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    visibility: hidden;
   }
-  
+
   &:before {
-      background-color: #00ffff;
-      z-index: -1;
+    background-color: #00ffff;
+    z-index: -1;
   }
 
   &:after {
-      background-color: #ff00ff;
-      z-index: -2;
+    background-color: #ff00ff;
+    z-index: -2;
   }
-  
+
   &:hover {
-      &:before {
-          visibility: visible;
-          animation: line-glitchy 0.3s ease 0.3s infinite;
-      }
-      
-      &:after {
-          visibility: visible;
-          animation: line-glitchy 0.3s ease infinite reverse;
-      }
+    &:before {
+      visibility: visible;
+      animation: line-glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      visibility: visible;
+      animation: line-glitchy 0.3s ease infinite reverse;
+    }
   }
 }
 
 @keyframes glitchy {
-  0%   {transform: translate(-2px, 2px);}
-  25%  {transform: translate(-2px, -2px);}
-  50%  {transform: translate(2px, 2px);}
-  75%  {transform: translate(2px, -2px);}
-  100%  {transform: translate(-2px, 2px);}
+  0% {
+    transform: translate(-2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
 }
 
 @keyframes line-glitchy {
-  0%   {transform: translate(-1px, 1px);}
-  25%  {transform: translate(-1px, -1px);}
-  50%  {transform: translate(1px, 1px);}
-  75%  {transform: translate(1px, -1px);}
-  100%  {transform: translate(-1px, 1px);}
+  0% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-1px, -1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+  75% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(-1px, 1px);
+  }
 }
 .btn-link {
   position: relative;
@@ -508,40 +518,41 @@ footer {
   font-size: 18px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+  margin: 7px;
   &:before,
   &:after {
-      content:'';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &:before {
-      background-color: #ffffff;
-      border-radius: 50px;
-      z-index: -1;
+    background-color: #ffffff;
+    border-radius: 50px;
+    z-index: -1;
   }
 
   &:after {
-      background-color: #ff00ff;
-      border-radius: 50px;
-      z-index: -2;
+    background-color: #ff00ff;
+    border-radius: 50px;
+    z-index: -2;
   }
-  
-  &:hover {
-      .link-inner {
-          animation: glitchy 0.3s ease 1;
-      }
 
-      &:before {
-          animation: glitchy 0.3s ease 0.3s infinite;
-      }
-      
-      &:after {
-          animation: glitchy 0.3s ease infinite reverse;
-      }
+  &:hover {
+    .link-inner {
+      animation: glitchy 0.3s ease 1;
+    }
+
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
   }
 }
 
@@ -551,3 +562,5 @@ footer {
   background-color: #fff;
   padding: 15px 25px;
 }
+
+
