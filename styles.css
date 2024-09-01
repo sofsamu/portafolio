@@ -95,10 +95,7 @@ nav ul li a {
 #me {
   padding: 120px 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
-
 #me h1 {
   font-size: 64px;
   font-weight: bold;
@@ -119,6 +116,37 @@ nav ul li a {
   margin-left: 10px;
   transition: all 0.3s ease-in-out;
   vertical-align: middle;
+  fill: var(--white-color);
+}
+
+#me a.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#me a.button:hover {
+  background-color: var(--secondary-color); /* Cambia el color de fondo al hacer hover */
+  color: var(--white-color);
+  transform: translateY(-5px); /* Desplaza el botón hacia arriba */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+#me a.button svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  fill: var(--white-color);
+  transition: fill 0.3s ease;
+}
+
+#me a.button:hover svg {
   fill: var(--white-color);
 }
 
