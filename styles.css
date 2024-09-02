@@ -105,6 +105,7 @@ nav ul li a:hover {
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
+  
 }
 
 #me p {
@@ -190,9 +191,10 @@ h2 {
 
 /* Proyectos */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  gap: 15px;
 }
 
 .project-item {
@@ -278,9 +280,8 @@ footer {
   color: #222831;
   border-radius: 50px;
   margin: 0 auto;
-  padding: 25px;
   width: 80%;
-  max-width: 700px;
+  max-width: 100%;
   box-shadow: 0 4px 15px var(--black-color);
   transform: scale(0.95);
   transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out,
@@ -298,13 +299,19 @@ footer {
 
 #academy {
   color: var(--white-color);
+  padding: 10px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   box-shadow: 0 8px 15px var(--black-color);
   justify-content: center;
+  overflow: scroll;
+  scrollbar-width: none;
 }
-
+#academy h3{
+  text-transform: uppercase;
+  margin: 20px;
+}
 #academy a {
   display: inline-flex;
   font-weight: bold;
@@ -312,8 +319,14 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-#course-item {
-  margin: 10px;
+
+#course-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  border: solid 2px var(--primary-color);
+  margin: 15px;
+  border-radius: 50%;
+
 }
 
 /* Estilos generales para el modal */
