@@ -1,6 +1,6 @@
 /* Variables de colores */
 :root {
-  --primary-color: #4E31AA;
+  --primary-color: #674bc4;
   --secondary-color: #284b63;
   --black-color: #353535;
   --white-color: #ffffff;
@@ -80,7 +80,7 @@ nav ul li {
 nav ul li a {
   font-weight: 600;
   color: #eeeeee;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
   padding-bottom: 5px;
   border-bottom: 3px solid transparent;
 }
@@ -88,6 +88,10 @@ nav ul li a {
   transform: 1s ease;
   padding-bottom: 5px;
   display: inline-block;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Sección principal con Imagen de Fondo */
@@ -127,13 +131,15 @@ nav ul li a {
   border-radius: 50px;
   font-weight: bold;
   transition: all 0.3s ease;
-  margin: 10px 0;
+  margin: 10px;
   text-align: center;
 }
 
 #me a.button:hover {
-  background-color: var(--secondary-color); /* Cambia el color de fondo al hacer hover */
-  color: var(--white-color);
+  background-color: var(
+    --white-color
+  ); /* Cambia el color de fondo al hacer hover */
+  color: var(--primary-color);
   transform: translateY(-5px); /* Desplaza el botón hacia arriba */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade sombra */
 }
@@ -147,26 +153,23 @@ nav ul li a {
 }
 
 #me a.button:hover svg {
-  fill: var(--white-color);
+  fill: var(--primary-color);
 }
 
 /* Secciones generales */
 main section {
-  padding: 80px 20px;
+  padding: 50px;
   text-align: center;
   margin-bottom: 30px;
-  background-color: #ffffff13;
-  backdrop-filter: blur(10px);
+  background-color: var(--black-color);
   border-radius: 50px;
-  box-shadow: 0 0 15px;
   margin: 30px;
+  overflow: hidden;
 }
 
 main section:not(:first-child) {
-  background-color: #ffffff13;
-  backdrop-filter: blur(10px);
+  background-color: var(--black-color);
   border-radius: 50px;
-  box-shadow: 0 0 15px #ffffff;
 }
 h2 {
   margin-bottom: 20px;
@@ -195,7 +198,7 @@ h2 {
 .project-item {
   background: var(--white-color);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 15px #0000001a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: var(--black-color);
@@ -271,25 +274,35 @@ footer {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  background-color: #eeeeee;
+  background-color: var(--white-color);
   color: #222831;
-  border-radius: 15px;
+  border-radius: 50px;
   margin: 0 auto;
   padding: 25px;
   width: 80%;
   max-width: 700px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px var(--black-color);
   transform: scale(0.95);
   transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out,
     transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 #about-content.show {
   max-height: 1000px;
   opacity: 1;
   padding: 20px;
   transform: scale(1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px var(--black-color);
+}
+
+#academy {
+  color: var(--white-color);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  box-shadow: 0 8px 15px var(--black-color);
+  justify-content: center;
 }
 
 #academy a {
@@ -297,7 +310,6 @@ footer {
   font-weight: bold;
   margin: 10px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 #course-item {
