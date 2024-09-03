@@ -231,14 +231,13 @@ h2 {
   width: 3.125rem; /* 50px */
   height: 3.125rem; /* 50px */
   transition: var(--transition-duration) ease;
-  fill: var(--primary-color);
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.322));
+  fill: var(--white-color);
 }
 
 #contact svg:hover {
-  fill: var(--white-color);
+  fill: var(--primary-color);
   transform: translateY(-0.625rem); /* -10px */
-  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.425));
+  filter: drop-shadow(rgba(255, 255, 255, 0.25) 0px 0px 25px);
 }
 
 /* Botón de scroll arriba */
@@ -299,10 +298,21 @@ footer {
   max-width: 60rem; /* 960px */
   box-shadow: var(--box-shadow-light);
   padding: 0 var(--padding-standard);
-  transition: opacity var(--transition-duration) ease,
-    max-height var(--transition-duration) ease;
+  transform: scale(0.95);
+  transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+  overflow-y: scroll;
+  overflow: scroll;
+  scrollbar-width: none;
 }
+#course-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  border: solid 2px var(--primary-color);
+  margin: 15px;
+  border-radius: 50%;
 
+}
 #about-content.open {
   max-height: 100rem; /* 1600px */
   opacity: 1;
