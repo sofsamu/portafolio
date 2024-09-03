@@ -78,7 +78,6 @@ nav {
   background-color: rgba(34, 40, 49, 0.16);
   backdrop-filter: blur(10px);
   z-index: 3;
-  box-shadow: var(--box-shadow-light);
   padding: var(--padding-standard) 0;
   font-size: var(--font-size-small);
 }
