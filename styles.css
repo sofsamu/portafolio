@@ -1,4 +1,3 @@
-/* Variables de colores */
 :root {
   --primary-color: #7209b7;
   --secondary-color: #284b63;
@@ -8,8 +7,9 @@
   --font-size-large: 2rem;
   --font-size-medium: 1.5rem;
   --font-size-small: 1rem;
-  --padding-standard: 1.25rem; /* 20px */
-  --padding-large: 2rem; /* 32px */
+  --padding-small: 0.5rem;
+  --padding-standard: 1.25rem;
+  --padding-large: 2rem;
   --border-radius-small: 10px;
   --border-radius-large: 50px;
   --transition-duration: 0.3s;
@@ -17,7 +17,6 @@
   --box-shadow-heavy: 0 10px 20px rgba(77, 77, 77, 0.2);
 }
 
-/* Reset y configuración global */
 *,
 *::before,
 *::after {
@@ -27,7 +26,7 @@
 }
 
 html {
-  font-size: 16px; /* Base de 16px, 1rem = 16px */
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -42,7 +41,7 @@ body {
 }
 
 .layout-box {
-  max-inline-size: 80rem; /* 1280px */
+  max-inline-size: 80rem;
   margin-inline: auto;
 }
 
@@ -63,14 +62,16 @@ img {
   border: 0;
 }
 
-/* Encabezado y Navegación */
 header {
   text-align: center;
+  position: relative;
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -88,28 +89,43 @@ nav ul li {
 }
 
 nav ul li a {
+  position: relative;
   font-weight: 600;
   color: var(--white-color);
-  transition: color var(--transition-duration) ease-in-out,
+  transition: all var(--transition-duration) ease-in-out,
     border-bottom var(--transition-duration) ease-in-out;
-  padding-bottom: 0.3125rem; /* 5px */
+  padding-bottom: 0.3125rem;
   border-bottom: 3px solid transparent;
   display: inline-block;
 }
 
-nav ul li a:hover {
-  border-bottom: 3px solid var(--primary-color);
-  color: var(--primary-color);
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width var(--transition-duration) ease-in-out;
 }
 
-/* Sección principal con Imagen de Fondo */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  transform: scale(1.05);
+}
+
+
 #me {
-  padding: 7.5rem 1.25rem; /* 120px 20px */
+  padding: 7.5rem 1.25rem;
   text-align: center;
 }
 
 #me h1 {
-  font-size: 4rem; /* 64px */
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: var(--padding-standard);
   text-transform: uppercase;
@@ -122,49 +138,6 @@ nav ul li a:hover {
   text-shadow: 0 0 10px var(--white-color);
 }
 
-#me svg {
-  width: 1.875rem; /* 30px */
-  height: 1.875rem; /* 30px */
-  margin-left: 0.625rem; /* 10px */
-  transition: all var(--transition-duration) ease-in-out;
-  vertical-align: middle;
-  fill: var(--white-color);
-}
-
-#me a.button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 0.75rem 1.5rem; /* 12px 24px */
-  border-radius: var(--border-radius-large);
-  font-weight: bold;
-  transition: all var(--transition-duration) ease;
-  margin: 0.625rem; /* 10px */
-  text-align: center;
-  box-shadow: var(--box-shadow-heavy);
-}
-
-#me a.button:hover {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-  transform: translateY(-0.3125rem); /* -5px */
-  box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 100px 0px,
-    rgba(113, 9, 183, 0.3) 0px 0px 60px 0px;
-}
-
-#me a.button svg {
-  width: 1.25rem; /* 20px */
-  height: 1.25rem; /* 20px */
-  margin-left: 0.5rem; /* 8px */
-  fill: var(--white-color);
-  transition: fill var(--transition-duration) ease;
-}
-
-#me a.button:hover svg {
-  fill: var(--primary-color);
-}
-
-/* Secciones generales */
 main section {
   padding: var(--padding-standard);
   text-align: center;
@@ -181,75 +154,39 @@ h2 {
   font-size: var(--font-size-large);
   color: var(--white-color);
   text-transform: uppercase;
+  text-align: center;
 }
 
-#skills ul {
+#projects {
+  text-align: left;
+  padding: var(--padding-large);
+}
+
+#projects h3 {
+  margin-bottom: var(--padding-standard);
+  font-size: var(--font-size-large);
+  text-align: center;
+}
+
+#projects p {
+  margin-top: 1rem;
+  color: var(--white-color);
+}
+#projects ul{
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 0.625rem; /* 10px */
-}
+}  
 
-#skills ul svg {
-  width: 3.125rem; /* 50px */
-  height: 3.125rem; /* 50px */
-  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.3));
-}
-
-/* Proyectos */
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.9375rem; /* 15px */
-}
-
-.project-item {
-  background: var(--white-color);
-  padding: 1.875rem; /* 30px */
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--box-shadow-light);
-  transition: transform var(--transition-duration) ease,
-    box-shadow var(--transition-duration) ease;
-  color: var(--black-color);
-  cursor: pointer;
-}
-
-.project-item:hover {
-  transform: translateY(-0.625rem); /* -10px */
-  box-shadow: var(--box-shadow-heavy);
-}
-
-/* Contacto */
-#contact ul {
-  display: flex;
-  justify-content: center;
-  gap: 0.625rem; /* 10px */
-  margin-top: var(--padding-standard);
-}
-
-#contact svg {
-  width: 3.125rem; /* 50px */
-  height: 3.125rem; /* 50px */
-  transition: var(--transition-duration) ease;
-  fill: var(--white-color);
-}
-
-#contact svg:hover {
-  fill: var(--primary-color);
-  transform: translateY(-0.625rem); /* -10px */
-  filter: drop-shadow(rgba(255, 255, 255, 0.25) 0px 0px 25px);
-}
-
-/* Botón de scroll arriba */
 .top-button {
-  width: 3.125rem; /* 50px */
-  height: 3.125rem; /* 50px */
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   background-color: var(--primary-color);
   color: var(--white-color);
   position: fixed;
-  bottom: 1.875rem; /* 30px */
-  right: 1.875rem; /* 30px */
+  bottom: 1.875rem;
+  right: 1.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,25 +204,25 @@ h2 {
 }
 
 .top-button svg {
-  width: 1.5625rem; /* 25px */
-  height: 1.5625rem; /* 25px */
+  width: 1.5rem;
+  height: 1.5rem;
 }
+
 .top-button:hover svg {
   fill: var(--primary-color);
 }
-/* Footer */
+
 footer {
   background: var(--black-color);
   color: var(--white-color);
   padding: var(--padding-standard) 0;
   text-align: center;
-  margin-top: 3.125rem; /* 50px */
+  margin-top: 3.125rem;
   font-size: var(--font-size-small);
   font-weight: 500;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* About y Formación */
 #courses-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -325,52 +262,137 @@ footer {
   color: var(--black-color);
   font-size: var(--font-size-small);
 }
-
-
-/* Estilo de botones en la sección Academy */
-a.button {
+#skills ul{
+  display: flex;
+  justify-content: center;
+  gap: var(--padding-small);
+}
+#skills svg{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.button {
   display: inline-block;
   background-color: var(--secondary-color);
   color: var(--white-color);
-  padding: 0.75rem 1.5rem; /* 12px 24px */
+  padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius-large);
   font-weight: bold;
   transition: all var(--transition-duration) ease;
-  margin: 0.3125rem; /* 5px vertical */
+  margin: 0.3125rem;
   text-align: center;
-  text-decoration: none; /* Asegura que el subrayado esté deshabilitado */
   box-shadow: var(--box-shadow-heavy);
 }
 
-a.button:hover {
+.button:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
-  transform: translateY(-0.3125rem); /* -5px */
+  transform: translateY(-0.3125rem);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 100px 0px,
     rgba(113, 9, 183, 0.3) 0px 0px 60px 0px;
 }
 
-/* Botón de "Ver más" */
-.toggle-button {
+.button2 {
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--white-color);
-  padding: 0.75rem 1.5rem; /* 12px 24px */
-  border: none;
+  padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius-large);
   font-weight: bold;
   transition: all var(--transition-duration) ease;
-  margin: var(--padding-standard);
+  margin: 0.625rem;
   text-align: center;
-  cursor: pointer;
   box-shadow: var(--box-shadow-heavy);
 }
 
-.toggle-button:hover {
+.button2:hover {
   background-color: var(--white-color);
   color: var(--primary-color);
-  transform: translateY(-0.3125rem); /* -5px */
-
+  transform: translateY(-0.3125rem);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 100px 0px,
     rgba(113, 9, 183, 0.3) 0px 0px 60px 0px;
 }
+
+.button2:hover svg {
+  fill: var(--primary-color);
+}
+
+a.button2 svg {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-left: 0.625rem;
+  transition: all var(--transition-duration) ease-in-out;
+  vertical-align: middle;
+  fill: var(--white-color);
+}
+
+.form-label {
+  font-size: var(--font-size-small);
+}
+
+@media screen and (max-width: 62rem) {
+  #me {
+    padding: 5rem 1rem;
+  }
+
+  #me h1 {
+    font-size: 3rem;
+  }
+
+  #me p {
+    font-size: var(--font-size-medium);
+  }
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-small);
+}
+.label {
+  border-radius: var(--border-radius-small);
+  text-align: center;
+  padding: var(--padding-small);
+  margin: var(--padding-small);
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.label:hover {
+  transform: scale(1.1) rotate(10deg);
+  animation: spin 0.5s forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+.HTML {
+  background-color: #E34F26;
+  border: solid 2px #9b2f11;
+  color: #fff; 
+}
+
+.CSS {
+  background-color: #1572B6;
+  border: solid 2px #0f5689;
+  color: #fff;
+}
+
+.JS {
+  background-color: #F7DF1E;
+  border: solid 2px #8e8018;
+  color: #222; 
+}
+
+.Boostrap {
+  background-color: #563D7C;
+  border: solid 2px #3d2660;
+  color: #fff;
+}
+
