@@ -16,7 +16,7 @@ Frontend: HTML, CSS, JavaScript
 Hosting: GitHub Pages
 
 **********************************************************************************************************************************
-Visita [este enlace](https://samuelgarcia.vercel.app/) para ver el portafolio en acción o navega al archivo index.html en tu navegador para verlo localmente.
+Visita [este enlace](https://samuelgarcia.dev/) para ver el portafolio en acción o navega al archivo index.html en tu navegador para verlo localmente.
 
 
 **Contribuciones**
