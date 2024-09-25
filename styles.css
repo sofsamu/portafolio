@@ -38,6 +38,8 @@ body {
   background-image: url(/images/texturebackground.png);
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .layout-box {
@@ -176,6 +178,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }  
 
 .top-button {
@@ -187,15 +190,21 @@ h2 {
   position: fixed;
   bottom: 1.875rem;
   right: 1.875rem;
-  display: flex;
+  display: none; 
   align-items: center;
   justify-content: center;
   cursor: pointer;
   box-shadow: var(--box-shadow-light);
-  transition: transform var(--transition-duration) ease,
-    background-color var(--transition-duration) ease;
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.top-button.show { 
+  display: flex; 
+  opacity: 1; 
+  transform: translateY(0); 
+}
 .top-button:hover {
   transform: scale(1.1);
   background-color: var(--white-color);
@@ -211,6 +220,7 @@ h2 {
 .top-button:hover svg {
   fill: var(--primary-color);
 }
+
 
 footer {
   background: var(--black-color);
@@ -252,16 +262,22 @@ footer {
   border-radius: var(--border-radius-small);
   margin-bottom: var(--padding-standard);
 }
-
-#about h3 {
+#about{
   color: var(--black-color);
+}
+.aboutMe{
+  color: var(--white-color);
+  padding: var(--padding-large);
+}
+.aboutMe h3 {
   font-size: var(--font-size-medium);
 }
 
-#about p {
-  color: var(--black-color);
+.aboutMe p {
   font-size: var(--font-size-small);
+  margin: var(--padding-small);
 }
+
 #skills ul{
   display: flex;
   justify-content: center;
