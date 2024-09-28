@@ -359,12 +359,20 @@ a.button2 svg {
     font-size: var(--font-size-medium);
   }
 }
-
-video {
-  width: 100%;
-  height: auto;
+.container-video {
+  overflow: hidden; 
   border-radius: var(--border-radius-small);
+  position: relative;
+  width: 100%; 
+  height: 40rem; 
 }
+video {
+  display: block;
+  width: 110%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
 .label {
   border-radius: var(--border-radius-small);
   text-align: center;
