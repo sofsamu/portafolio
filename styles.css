@@ -163,11 +163,13 @@ h2 {
   padding: var(--padding-large);
   text-align: center;
 }
+
 .project-title {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
 }
+
 .projects-container {
   display: flex;
   align-items: flex-start;
@@ -184,6 +186,7 @@ h2 {
   margin-top: 1rem;
   color: var(--white-color);
 }
+
 .project-links {
   margin-top: 10px;
 }
@@ -193,6 +196,7 @@ h2 {
   padding: 0;
   margin-top: 15px;
 }
+
 .project-info {
   flex-grow: 1;
   text-align: left;
@@ -201,13 +205,15 @@ h2 {
   align-items: center;
   gap: 10px;
 }
+
 .projects-img {
   border-radius: var(--border-radius-large);
   margin-right: 20px;
-  align-self: flex-start; 
+  align-self: flex-start;
   transition: all 0.5s ease;
 }
-.projects-img:hover{
+
+.projects-img:hover {
   box-shadow: rgba(0, 0, 0, 0.596) 0px 0px 60px 0px;
   transform: scale(1.05);
 }
@@ -253,7 +259,6 @@ h2 {
   fill: var(--primary-color);
 }
 
-
 footer {
   background: var(--black-color);
   color: var(--white-color);
@@ -261,8 +266,8 @@ footer {
   text-align: center;
   margin-top: 3.125rem;
   font-size: var(--font-size-small);
-  font-weight: 500;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  bottom: 0;
 }
 
 #courses-container {
@@ -416,9 +421,11 @@ a.button2 svg {
   0% {
     transform: scale(1.1) rotate(0deg);
   }
+
   50% {
     transform: scale(2) rotate(360deg);
   }
+
   100% {
     transform: scale(1.1) rotate(360deg);
   }
@@ -446,4 +453,67 @@ a.button2 svg {
   background-color: #563D7C;
   border: solid 2px #3d2660;
   color: #fff;
+}
+form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: var(--padding-standard);
+  background-color: var(--black-color);
+  border-radius: var(--border-radius-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-standard);
+}
+
+form label {
+  color: var(--white-color);
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: var(--padding-small);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: var(--padding-small);
+  border-radius: var(--border-radius-small);
+  border: 2px solid transparent;
+  background-color: var(--grey-color);
+  color: var(--black-color);
+  font-size: var(--font-size-small);
+  transition: border-color var(--transition-duration) ease-in-out;
+  margin-bottom: var(--padding-standard);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+form button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  cursor: pointer;
+} 
+
+form button:focus {
+  outline: none;
+  border-color: var(--primary-color);
 }
